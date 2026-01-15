@@ -1,0 +1,52 @@
+<nav class="glass">
+  <div class="navbar-content">
+    <!-- LEFT GROUP: Logo (Dilkash) and Places (Active Pill) -->
+    <div class="nav-left">
+      <!-- Logo -->
+      <button class="menu-toggle" aria-expanded="false" aria-controls="collapsible-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu menu-icon"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+      </button>
+
+      <a href="/" class="logo"> Dilkash </a>
+      
+      
+      <!-- Places Link (Active Pill) -->
+      <a href="/places" class="nav-link active"> Places </a>
+    </div>
+
+    <!-- RIGHT GROUP: Register, Login, Search Bar -->
+    <div class="nav-right" id="collapsible-nav">
+      
+      <a href="/places" class="nav-link place-link"> Places </a>
+
+      <% if(!currentUser){ %>
+        <!-- Standard Link - Register -->
+        <a href="/auth/register" class="nav-link"> Register </a>
+
+        <!-- Standard Link - Login -->
+        <a href="/auth/login" class="nav-link"> Login </a>
+      <% }else { %>
+          <a href="/auth/logout" class="nav-link"> Logout </a>
+      <% } %>
+
+      <form action="/places" >
+        <!-- Search Bar -->
+        <div class="search-bar-container">
+          <!-- Search Icon -->
+          <div class="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          </div>
+          <!-- Input Field -->
+          <input type="search" placeholder="Search..." class="search-input" name="q"/>
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+<script>
+
+    
+</script>

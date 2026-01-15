@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dilkash Bharat</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet.css" />
+    <link rel="stylesheet" href="/css/placesIndex.css" />
+    <link rel="stylesheet" href="/css/singlePlace.css" />
+    <link rel="stylesheet" type="text/css" href="/css/registerForm.css" />
+    <link rel="stylesheet" type="text/css" href="/css/home.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.maptiler.com/maptiler-sdk-js/v3.6.1/maptiler-sdk.umd.min.js"></script>
+<link href="https://cdn.maptiler.com/maptiler-sdk-js/v3.6.1/maptiler-sdk.css" rel="stylesheet">
+  </head>
+  <body
+    class="bg-gradient-to-br from-emerald-900 to-teal-800 inter-font min-h-screen py-6 px-4 md:px-8"
+  >
+    <%- include('../partials/navbar')%> 
+    
+    <% if ((success && success.length) || (error && error.length)) {%> 
+      <%- include('../partials/flash')%> 
+    <% } %>
+    
+    <div class="main-div w-full h-full mt-10"><%-body%></div>
+    
+    <script src="/js/navbar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="/js/flash.js"></script>
+    <script type="module" src="/js/registerForm.js"></script>
+    
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".dynamic-card"), {
+        max: 10,
+        speed: 500,
+        glare: true,
+        "max-glare": 1.5,
+      });
+    </script>
+  </body>
+</html>
