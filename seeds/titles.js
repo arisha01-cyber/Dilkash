@@ -5,7 +5,6 @@ module.exports = [
   "Radiant Twilight",
   "Eternal Echo",
   "Golden Tranquil",
-  "Endless Radiance",
   "Enchanted Solace",
   "Shimmering Dawn",
   "Fragile Rapture",
